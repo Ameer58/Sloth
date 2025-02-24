@@ -1,0 +1,27 @@
+{
+    "name": "sloth-coin-site",
+    "version": "1.0.0",
+    "description": "Official website for $SLOTH meme coin",
+    "main": "index.js",
+    "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.0.8",
+        "framer-motion": "^10.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "recharts": "^2.4.3",
+        "tailwindcss": "^4.0.8"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.3.4",
+        "vite": "^4.0.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
