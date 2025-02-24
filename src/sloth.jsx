@@ -60,7 +60,7 @@ export default function SlothLandingPage() {
           {/* Contract Address Section with Jungle Style */}
           <div className="contract-address">
             <strong className="jungle-text">Contract Address:</strong>
-            <span className="coming-soon jungle-text">Coming Soon</span>
+            <span className="coming-soon jungle-text">2S4srxuFMZwL78SFPtHEaV8N3M9C6Jwpi9VViYUsmoon</span>
           </div>
 
           {/* Action Buttons */}
@@ -76,7 +76,7 @@ export default function SlothLandingPage() {
               </a>
             </button>
             <button className="btn-buy jungle-btn">
-              <a href="https://dexscreener.com/YOUR_TOKEN" target="_blank">
+              <a href="https://dexscreener.com/solana/6r4jvuq3vhjh5a2dkg3endi22vfhjxrmibk89detcsjm" target="_blank">
                 🚀 Buy $SLOTH
               </a>
             </button>
