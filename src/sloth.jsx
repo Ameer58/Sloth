@@ -24,7 +24,7 @@ export default function SlothLandingPage() {
   return (
     <div className="landing-page-container">
       {loading ? (
-        <div className="loading-container">
+        <div className="loading-animation">
           <motion.div
             className="flex flex-col items-center text-[20rem]"
             initial={{ scale: 0.5, opacity: 0 }}
@@ -71,7 +71,7 @@ export default function SlothLandingPage() {
               </a>
             </button>
             <button className="btn-telegram jungle-btn">
-              <a href="https://t.me/your_sloth_coin" target="_blank">
+              <a href="https://t.me/coinSlothh" target="_blank">
                 <FaTelegram className="mr-2" /> Telegram
               </a>
             </button>

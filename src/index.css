@@ -1,159 +1,192 @@
-/* General Page Styles */
+/* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto;   /* Allow vertical scrolling */
-  }
-  
-  .landing-page-container {
-    background: url('./sl.png') no-repeat center center fixed; /* Replace with your image URL */
-    background-size: cover; /* Ensures the image covers the whole page */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
-    background-position: center center; /* Ensures the image is always centered */
-    position: relative; /* Necessary for positioning overlay */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, goofy font */
-    color: #FFFFFF; /* White text for readability */
-    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-    min-height: 100vh; /* Allows the content to take at least the full viewport height */
+    align-items: flex-start; /* Ensures content aligns at the top */
+    font-family: 'Arial', sans-serif;
+    color: #000000; /* Black color for text */
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background: url('./sl.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh; /* Ensures the content takes up at least the full height of the viewport */
   }
   
-  /* Dark Overlay to reduce the brightness of the image */
-  .landing-page-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Darker overlay for reducing brightness */
-    z-index: -1; /* Put the overlay behind content */
-  }
-  
-  /* Content Section */
+  /* Ensure the content is scrollable when necessary */
   .content {
-    padding: 20px;
     width: 100%;
     max-width: 1200px;
-    border-radius: 8px;
-    position: relative; /* Ensure content appears on top of the background */
+    padding: 20px;
+    overflow-y: auto;
+    margin-top: 20px; /* To avoid any potential overlaps */
+    flex-grow: 1; /* Ensures the content grows and fills the screen space */
   }
   
-  /* Title Styling */
-  .title-container h1 {
+  /* Title */
+  h1 {
     font-size: 4rem;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF; /* White text for visibility */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Strong shadow for better contrast */
+    color: #000000; /* Black color */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7); /* Light shadow for contrast */
   }
   
-  .money-icon {
-    margin-left: 10px;
-    font-size: 3rem;
-    color: #000000; /* Gold color for the money icon */
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000; /* Black color */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7); /* Light shadow for contrast */
   }
   
-  /* Jungle Theme for Text */
-  .jungle-text {
-    color: #FFFFFF; /* White text for contrast */
-    font-size: 1.2rem; /* Adjusted for readability */
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-shadow: 2px 2px 6px rgb(255, 255, 255); /* Light shadow to improve contrast */
+  p {
+    font-size: 1.2rem;
+    color: #000000; /* Black color */
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7); /* Light shadow for contrast */
   }
   
-  /* Fun Section */
-  .content p {
-    font-size: 1.5rem;
-    color: #ffffff; /* White text */
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    margin: 10px 0;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow for better readability */
-  }
-  
-  /* Buttons Styling */
-  .jungle-btn {
-    background-color: #6B4F3D; /* Sloth brown color */
-    color: white;
+  /* Buttons */
+  button {
+    background-color: #F3E1A1; /* Light yellow background */
+    color: #000000; /* Black text */
     border: none;
-    padding: 12px 24px;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-    margin: 10px 0;
-    display: inline-flex;
-    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7); /* Light shadow for buttons */
   }
   
-  .jungle-btn:hover {
-    background-color: #8B4513; /* Darker brown on hover */
+  /* Button hover effects */
+  button:hover {
+    background-color: #D4B18D; /* Slightly darker yellow */
+    transform: translateY(-2px);
   }
   
-  /* Buttons with Icons */
-  .jungle-btn .mr-2 {
-    margin-right: 8px; /* Adjust icon spacing */
+  button:focus {
+    outline: none;
   }
   
-  /* Chart Section */
-  .market-moves {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-  }
-  
-  .recharts-line {
-    stroke: #8B4513; /* Dark brown color for the chart line */
-  }
-  
-  .recharts-tooltip {
-    background-color: #8B4513; /* Dark brown tooltip */
-    color: white;
-  }
-  
-  /* Contract Address Styling */
-  .contract-address {
-    padding: 12px 24px;
-    border-radius: 8px;
-    margin-top: 16px;
-  }
-  
-  .coming-soon {
-    font-style: italic;
-    color: #4B6E28;
-  }
-  
-  /* Loading Text */
-  .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .loading-container .motion-div {
-    font-size: 10rem;
-    color: #4B6E28;
-  }
-  
-  /* Buttons & Links Styling */
+  /* For links inside buttons */
   a {
     color: inherit;
     text-decoration: none;
   }
   
-  a:hover {
-    text-decoration: underline;
+  /* Chart container */
+  .chart-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly translucent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart-title {
+    color: #000000; /* Black text */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contract Address */
+  .contract-address {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly translucent background */
+    color: #000000; /* Black text */
+    padding: 10px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Fun text (Making fun text black with highlights) */
+  .fun-text {
+    color: #000000; /* Black text */
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)); /* Light gradient for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adding shadow for better visibility */
+    font-weight: bold;
+  }
+  
+  /* Ensuring the fun text has better readability on mobile */
+  @media (max-width: 480px) {
+    .fun-text {
+      font-size: 1rem;
+      padding: 0.4rem;
+    }
+  }
+  
+  /* Button styling for mobile */
+  button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Loading Animation */
+ /* Loading Animation */
+.loading-animation {
+    color: #000000; /* Black color for loading text */
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7); /* Light shadow for loading animation */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    position: absolute; /* Ensures it's positioned relative to the parent container */
+    top: 50%; /* Moves the element to the center vertically */
+    left: 50%; /* Moves the element to the center horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the element to be exactly in the center */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
   }
   
